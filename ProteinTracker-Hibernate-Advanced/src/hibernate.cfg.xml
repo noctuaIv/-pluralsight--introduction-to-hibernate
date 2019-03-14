@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.password">appuser</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/Protein_Tracker</property>
+  <property name="hibernate.connection.username">appuser</property>
+  <property name="hibernate.default_schema">protein_tracker</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.show_sql">true</property>
+  <property name="hibernate.hbm2ddl.auto">create</property>
+  <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+  <property name="hibernate.cache.use_second_level_cache">true</property>
+  <property name="hibernate.jdbc.batch_size">20</property>
+  <mapping resource="com/simpleprogrammer/User.hbm.xml"/>
+  <mapping resource="com/simpleprogrammer/UserHistory.hbm.xml"/>
+  <mapping resource="com/simpleprogrammer/ProteinData.hbm.xml"/>
+  <mapping resource="com/simpleprogrammer/GoalAlert.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>
